@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Cheques",
+  "version": "1.0.0",
+  "description": "Valores mejorados para los eCheqs",
+  "icons": {
+    "128": "images/Cheque.avif"
+  },
+  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["https://online.bbva.com.ar/*"],
+    "js": ["content.js"]
+  }],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
+
